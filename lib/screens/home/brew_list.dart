@@ -13,7 +13,7 @@ class BrewList extends StatefulWidget {
 class _BrewListState extends State<BrewList> {
   @override
   Widget build(BuildContext context) {
-    final brews = Provider.of<List<Brew>?>(context);
+    final brews = Provider.of<List<Brew>?>(context) ?? [];
     //brews can be null so its index can not be unconditionally accessed, so we use if-else condition to return empty container if brews is null
     return brews != null
         ? ListView.builder(
